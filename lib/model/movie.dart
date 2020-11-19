@@ -10,7 +10,7 @@ class Movie {
   String originalTitle;
   List<int> genreIds;
   String title;
-  double voteAverage;
+  num voteAverage;
   String overview;
   String releaseDate;
 
@@ -42,7 +42,7 @@ class Movie {
     originalTitle = json["original_title"];
     genreIds = json["genre_ids"] != null ? json["genre_ids"].cast<int>() : [];
     title = json["title"];
-    // voteAverage = json["vote_average"];
+    voteAverage = json["vote_average"];
     overview = json["overview"];
     releaseDate = json["release_date"];
   }
@@ -60,7 +60,7 @@ class Movie {
     map["original_title"] = originalTitle;
     map["genre_ids"] = genreIds;
     map["title"] = title;
-    // map["vote_average"] = voteAverage;
+    map["vote_average"] = voteAverage;
     map["overview"] = overview;
     map["release_date"] = releaseDate;
     return map;

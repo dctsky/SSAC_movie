@@ -9,14 +9,18 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black87,
       appBar: AppBar(
-        title: Text('title'),
+        backgroundColor: Colors.black87,
+        title: Text('상세 정보'),
       ),
-      body: Column(
-        children: [
-          Text(movie.title),
-          Image.network('https://image.tmdb.org/t/p/w500/${movie.posterPath}', fit: BoxFit.cover,),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text(movie.title),
+            Image.network('https://image.tmdb.org/t/p/w500/${movie.posterPath}', fit: BoxFit.cover,),
+          ],
+        ),
       ),
     );
   }
